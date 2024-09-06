@@ -1,0 +1,8 @@
+# Omisiones de archivos y directorios
+.DS_Store
+
+# Directorios de node_modules
+node_modules
+
+# Directorios de dependencias
+package-lock.json
