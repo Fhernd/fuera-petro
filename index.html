@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador Colombia</title>
+    <title>¡Fuera Petro!</title>
     <style>
         body, html {
             height: 100%;
@@ -50,7 +50,10 @@
     </div>
 
     <script>
-        function updateCountdown() {
+        /**
+         * Actualiza el contador de tiempo restante para la salida de Petro.
+         */
+        function actualizarContadorSalidaPetro() {
             const endDate = new Date("August 7, 2026 00:00:00").getTime();
             const now = new Date().getTime();
             const timeLeft = endDate - now;
@@ -67,8 +70,8 @@
                 hours + " horas, " + minutes + " minutos, " + seconds + " segundos";
         }
 
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
+        setInterval(actualizarContadorSalidaPetro, 1000);
+        actualizarContadorSalidaPetro();
     </script>
 </body>
 </html>
