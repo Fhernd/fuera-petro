@@ -1,0 +1,86 @@
+/* Fondo del cuerpo */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: skyblue;
+    overflow: hidden;
+}
+
+/* Estilo del poste de la bandera */
+.flagpole {
+    width: 10px;
+    height: 400px;
+    background-color: #333;
+    margin-right: 10px;
+}
+
+/* Estilo de la bandera */
+.flag {
+    width: 250px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    animation: wave 2s ease-in-out infinite;
+}
+
+/* Estilos de las franjas de la bandera */
+.stripe {
+    height: 33.33%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: wave-stripes 2s ease-in-out infinite;
+}
+
+.red {
+    background-color: red;
+    top: 0;
+}
+
+.white {
+    background-color: white;
+    top: 33.33%;
+}
+
+.blue {
+    background-color: blue;
+    top: 66.66%;
+}
+
+/* Animación para la bandera ondeante */
+@keyframes wave {
+    0% {
+        transform: skewY(0deg) translateX(0);
+    }
+    25% {
+        transform: skewY(10deg) translateX(-5px);
+    }
+    50% {
+        transform: skewY(-10deg) translateX(10px);
+    }
+    75% {
+        transform: skewY(10deg) translateX(-5px);
+    }
+    100% {
+        transform: skewY(0deg) translateX(0);
+    }
+}
+
+/* Pequeñas oscilaciones para las franjas */
+@keyframes wave-stripes {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
